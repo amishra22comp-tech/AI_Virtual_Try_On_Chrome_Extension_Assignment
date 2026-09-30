@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <nav>
+    <button data-tab="tryon" class="on">Try On</button>
+    <button data-tab="profile">My Profile</button>
+    <button data-tab="results">Results</button>
+  </nav>
+  <div id="msg"></div>
+
+  <section id="tryon">
+    <div class="row"><b>Products on this page</b><button id="rescan" class="link">Rescan</button></div>
+    <div id="products"></div>
+    <div id="panel" hidden>
+      <h3 id="ptitle"></h3>
+      <p class="tip">Pick 1-2 product images (best = clear, front-facing):</p>
+      <div id="variants"></div>
+      <label>Category <select id="cat"></select></label>
+      <label class="chk"><input type="checkbox" id="scene" checked> Context-aware scene (background matches product)</label>
+      <button id="go" class="primary">Try On</button>
+      <progress id="bar" hidden></progress>
+      <div id="status"></div>
+      <img id="result" hidden alt="Try-on result">
+    </div>
+  </section>
+
+  <section id="profile" hidden>
+    <p class="tip">Create your profile once. Only the photos needed for each product type are used.</p>
+    <div id="slots"></div>
+    <button id="wipe" class="danger">Delete my profile photos</button>
+  </section>
+
+  <section id="results" hidden>
+    <div id="rlist"></div>
+    <button id="wipeRes" class="danger">Delete all results</button>
+  </section>
+  <script src="popup.js"></script>
+</body></html>
